@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+
+    <div class="timer">Time: <span id="time">0</span></div>
+
+    <div class="wrapper">
+      <div id="start-screen" class="start">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+          Try to answer the following code-related questions within the time
+          limit. Keep in mind that incorrect answers will penalize your
+          time by ten seconds!
+        </p>
+        <button id="start">Start Quiz</button>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <h2>All done!</h2>
+        <p>Your final score is <span id="final-score"></span>.</p>
+        <p>
+          Enter initials: <input type="text" id="initials" max="3" />
+          <button id="submit">Submit</button>
+        </p>
+      </div>
+
+      <div id="quiz">
+        <div class="question">
+          <h2>Question 1</h2>
+          <p>Variables are</p>
+          <input type="radio" name="q1" value="0"><label>Group of letters</label><br>
+          <input type="radio" name="q1" value="1"><label>Numbers</label><br>
+          <input type="radio" name="q1" value="2"><label></label>Containers for information<br>
+        </div>
+        <div class="question">
+          <h2>Question 2</h2>
+          <p>Which one is NOT an input device?</p>
+          <input type="radio" name="q2" value="0"><label>A keyboard</label><br>
+          <input type="radio" name="q2" value="1"><label>A touch screen</label><br>
+          <input type="radio" name="q2" value="2"><label>A computer mouse</label><br>
+          <input type="radio" name="q2" value="3"><label>A computer screen</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 3</h2>
+          <p>What is a "loop"?</p>
+          <input type="radio" name="q2" value="0"><label>Repeating a section of code</label><br>
+          <input type="radio" name="q2" value="1"><label>One section of code</label><br>
+          <input type="radio" name="q2" value="2"><label>Different programs put together</label><br>
+          <input type="radio" name="q2" value="3"><label>One function of code</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 4</h2>
+          <p>JavaScript file has an extention of:</p>
+          <input type="radio" name="q2" value="0"><label>.java</label><br>
+          <input type="radio" name="q2" value="1"><label>.js</label><br>
+          <input type="radio" name="q2" value="2"><label>javascript</label><br>
+          <input type="radio" name="q2" value="3"><label>xml</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 5</h2>
+          <p>The Tag is used to give heading to the table</p>
+          <input type="radio" name="q2" value="0"><label>Head</label><br>
+          <input type="radio" name="q2" value="1"><label>Td</label><br>
+          <input type="radio" name="q2" value="2"><label>Th</label><br>
+          <input type="radio" name="q2" value="3"><label>Caption</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 6</h2>
+          <p>isNaN() evaluates and argument to determine if given value:</p>
+          <input type="radio" name="q2" value="0"><label>Is Not a Null</label><br>
+          <input type="radio" name="q2" value="1"><label>Is Not a Number</label><br>
+          <input type="radio" name="q2" value="2"><label>Is Not a New Object</label><br>
+          <input type="radio" name="q2" value="3"><label>None of the above</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 7</h2>
+          <p>Method Prompt() contaom ... number of parameters</p>
+          <input type="radio" name="q2" value="0"><label>one</label><br>
+          <input type="radio" name="q2" value="1"><label>two</label><br>
+          <input type="radio" name="q2" value="2"><label>three</label><br>
+          <input type="radio" name="q2" value="3"><label>four</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 8</h2>
+          <p>Function is used to parse a String to Int</p>
+          <input type="radio" name="q2" value="0"><label>Integer.Parse</label><br>
+          <input type="radio" name="q2" value="1"><label>Int.Parse</label><br>
+          <input type="radio" name="q2" value="2"><label>Parse.Int</label><br>
+          <input type="radio" name="q2" value="3"><label>None</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 9</h2>
+          <p>Inside which HTML element do we put the javascript</p>
+          <input type="radio" name="q2" value="0"><label>Js</label><br>
+          <input type="radio" name="q2" value="1"><label>JavaScript</label><br>
+          <input type="radio" name="q2" value="2"><label>Script</label><br>
+          <input type="radio" name="q2" value="3"><label>Scripting</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 10</h2>
+          <p>A function associated with an object is called:</p>
+          <input type="radio" name="q2" value="0"><label>Function</label><br>
+          <input type="radio" name="q2" value="1"><label>Method</label><br>
+          <input type="radio" name="q2" value="2"><label>Link</label><br>
+          <input type="radio" name="q2" value="3"><label>None</label><br>
+        </div>
+        
+        <button id="submit">Submit</button>
+      </div>
+
+      <div id="feedback" class="feedback hide"></div>
+    </div>
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
+  </body>
+</html>

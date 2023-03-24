@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timer Example</title>
+</head>
+<body>
+  <h1>Timer Example</h1>
+  <p id="timer">10</p>
+
+  <script>
+    let count = 10; // initial count value
+    const timerDisplay = document.getElementById('timer'); // get the timer element
+
+    // define the function to be executed every second
+    const countdown = setInterval(() => {
+      timerDisplay.innerText = count; // update the timer display with the current count value
+      count--; // decrease the count value by 1
+      if (count < 0) {
+        clearInterval(countdown); // stop the timer when the count reaches 0
+        timerDisplay.innerText = 'Time is up!'; // update the timer display with a message
+      }
+    }, 1000); // execute the function every 1000 milliseconds (1 second)
+  </script>
+</body>
+</html>
